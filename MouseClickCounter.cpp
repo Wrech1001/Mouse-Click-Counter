@@ -3,15 +3,24 @@
 
 #include <iostream>
 #include <windows.h>
+using namespace std; 
 
 int main()
 {
     int as = 0;
+    int maks = 50
     while (true) {
-        if (GetAsyncKeyState(VK_LBUTTON) & 1) {
+        if (GetAsyncKeyState(VK_LBUTTON) & 3) {
             system("CLS");
             as++;
-            std::cout << as;
+            cout << as;
+            cout << "cukup";
         }
-    }
+    }    
+        if (as==maks)
+        {
+            cout << "anda telah mencapai batas maksimum";
+            return;
+        }
+
 }
